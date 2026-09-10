@@ -1,9 +1,12 @@
 import React from "react";
 import { BoardContext } from "./App.js";
 // import useContext here 💖
+import {useContext} from "react"
+import {createContext} from "react"
 
 export default function Task({ task }) {
   // Add useContext here 💖
+  const {tasks, moveTask } = useContext(BoardContext)
 
   function handleStatusChange(e) {
     return moveTask(task.id, e.target.value);
